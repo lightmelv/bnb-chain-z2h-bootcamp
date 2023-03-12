@@ -6,10 +6,9 @@
 - Address 0x000000000000000000000000000000000000dEaD if called by the deployer
 - The deployer's address otherwise
 
+```
     // SPDX-License-Identifier: None
-
     pragma solidity 0.8.17;
-
 
     contract BootcampContract {
 
@@ -27,3 +26,4 @@
             }
         }
     }
+```
