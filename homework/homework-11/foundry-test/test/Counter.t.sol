@@ -21,4 +21,12 @@ contract CounterTest is Test {
         counter.setNumber(x);
         assertEq(counter.number(), x);
     }
+
+    function testFuzzValue(uint256 _value) public {
+        _value = bound(_value, 0, 99999);
+        // Call contract function with value
+        counter.setNumber(_value);
+        // Perform validation
+        assertEq(counter.number(), _value);
+    }
 }
